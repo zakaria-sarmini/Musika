@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.link:hover {
+    border-left: 5px solid #fff;
+    padding-left: 10px;
+}

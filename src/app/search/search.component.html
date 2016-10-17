@@ -1,0 +1,17 @@
+<h1>Need Music ?</h1>
+<p class="lead">Use Musika to browse new releases and find news about your band !</p>
+<form [formGroup]="form">
+    <div class="form-group">
+        <input type="text" formControlName="query" (keyup)="onType(query.value)" class="form-control"
+               placeholder="Search Music..." #query required><br>
+    </div>
+</form>
+<div *ngIf="searchRes" class="col-md-8 col-md-offset-2">
+    <div class="well">
+        <h3 *ngFor="let res of searchRes">
+            <a class="link" routerLink="/artist/{{res.id}}">{{res.name}}</a>
+        </h3>
+    </div>
+</div>
+<br>
+
